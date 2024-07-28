@@ -4,6 +4,27 @@ Os traigo un script de python que incluye 5 mini programas dentro de el script p
 Os he dejado el fichero.py adjunto a este repositorio pero os dejo el codigo aqui por si hay algun problema:
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import socket
 import keyboard
 import webbrowser
